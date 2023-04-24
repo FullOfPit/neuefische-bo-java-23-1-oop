@@ -2,10 +2,27 @@ package de.neuefische;
 
 public class Car {
 
-    private String brand;
-    private int year;
-    double price;
-    static boolean hasFourWeels = true;
+    String brand;
+    int year;
+    private double price;
+    boolean hasFourWeels = true;
+
+    Car() {
+
+    }
+
+    Car(String brand, int year, double price) {
+        this.brand = brand;
+        this.year = year;
+        this.price = price;
+    }
+
+    Car(String brand, int year, double price, boolean hasFourWeels) {
+        this.brand = brand;
+        this.year = year;
+        this.price = price;
+        this.hasFourWeels = hasFourWeels;
+    }
 
     void honks() {
         System.out.println("HONK!");
@@ -35,5 +52,16 @@ public class Car {
 
     void printPrice(double price) {
         System.out.println(this.price);
+    }
+
+    double getPrice() {
+        return this.price;
+    }
+
+    void setPrice(double price) {
+        this.price = price;
+    }
+    void ihgr() {
+        hasFourWeels = false;
     }
 }
